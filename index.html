@@ -5,7 +5,6 @@
   <title>Brights CHEER DANCE | 所沢キッズチアダンス</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* ====== 基本設定 ====== */
     :root {
       --yellow: #facc15;
       --orange: #fb923c;
@@ -16,17 +15,15 @@
       --shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
- body {
-  margin: 0;
-  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  color: var(--text);
-  background: #cce7ff; /* ←ここを水色に変更 */
-}
-
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+      color: var(--text);
+      background: #cce7ff;
+    }
 
     img { max-width: 100%; display: block; }
 
-    /* ====== ヘッダー ====== */
     header {
       position: sticky;
       top: 0;
@@ -51,12 +48,6 @@
       gap: 10px;
     }
 
-    /* Brights の文字だけ白＋濃い青 */
-    .brights-mark {
-      color: #ffffff;
-      text-shadow: 0 0 3px #003366;
-    }
-
     nav button {
       background: none;
       border: none;
@@ -77,7 +68,6 @@
       color: #fff;
     }
 
-    /* ====== セクション共通 ====== */
     section {
       padding: 70px 20px;
     }
@@ -98,7 +88,6 @@
       line-height: 1.7;
     }
 
-    /* ====== HERO ====== */
     .hero {
       display: grid;
       grid-template-columns: 1fr;
@@ -110,6 +99,12 @@
       font-size: 2.4rem;
       line-height: 1.3;
       margin-bottom: 16px;
+    }
+
+    /* ★ Brights ✨ の文字を白＋濃い青に変更 */
+    .hero-title .brights-mark {
+      color: #ffffff;
+      text-shadow: 0 0 4px #003366;
     }
 
     .btn {
@@ -133,7 +128,6 @@
       color: var(--orange);
     }
 
-    /* ====== クラス紹介 ====== */
     .class-grid {
       display: flex;
       justify-content: center;
@@ -162,7 +156,6 @@
       border-color: var(--orange);
     }
 
-    /* ====== アクセス ====== */
     .access-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -192,7 +185,6 @@
       display: block;
     }
 
-    /* ====== フッター ====== */
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -200,7 +192,6 @@
       border-top: 1px solid rgba(0,0,0,0.1);
     }
 
-    /* ====== スマホ最適化 ====== */
     @media (max-width: 600px) {
       section { padding: 50px 16px; }
       .hero { padding-top: 40px; }
@@ -225,12 +216,11 @@
 
 <body>
 
-  <!-- ====== HEADER ====== -->
   <header>
     <div class="header-inner">
       <div class="logo-area">
         <div>
-          <strong><span class="brights-mark">Brights</span> CHEER DANCE</strong><br>
+          <strong>Brights CHEER DANCE</strong><br>
           <small>所沢キッズチアダンス</small>
         </div>
       </div>
@@ -244,14 +234,11 @@
     </div>
   </header>
 
-  <!-- ====== HERO ====== -->
   <section id="top">
     <div class="inner hero">
-
       <img src="logo.jpg" alt="Brights ロゴ" style="width: 70%; max-width: 420px; margin: 0 auto 30px; filter: drop-shadow(0 6px 10px rgba(0,0,0,0.15));">
-
       <div>
-        <h1 class="hero-title">所沢キッズチアダンス Brights</h1>
+        <h1 class="hero-title">所沢キッズチアダンス <span class="brights-mark">Brights ✨</span></h1>
         <p class="lead">
           毎週土曜日 13:45〜14:45<br>
           小学1年生〜／初心者大歓迎！<br>
@@ -260,98 +247,16 @@
         <button class="btn btn-primary" onclick="scrollToId('contact')">無料体験に申し込む</button>
         <button class="btn btn-ghost" onclick="scrollToId('classes')">クラスを見る</button>
       </div>
-
     </div>
   </section>
 
-  <!-- ====== CLASSES ====== -->
   <section id="classes">
     <div class="inner">
       <h2>クラス紹介</h2>
       <p class="lead">初心者から楽しく始められるチアダンスクラスです。</p>
-
       <div class="class-grid">
         <div class="class-card class-card-accent">
           <img src="brights写真.jpg" alt="Brightsクラス">
           <h3>Brightsクラス</h3>
           <p>対象：小学1年生〜</p>
-          <p>毎週土曜日 13:45〜14:45</p>
-          <p><strong>料金：月額 6,000円（月4回）</strong></p>
-          <p>初心者も安心して参加できるチアダンスクラス。笑顔で楽しく踊りながら、チームワークを育みます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== ACCESS ====== -->
-  <section id="access">
-    <div class="inner">
-      <h2>アクセス</h2>
-      <p class="lead">所沢市内の公民館でレッスンを行っています。</p>
-
-      <div class="access-grid">
-
-        <!-- 所沢市中央公民館 -->
-        <div class="access-box">
-          <h3>所沢市中央公民館</h3>
-          <p>〒359-1121<br>埼玉県所沢市元町27-5 所沢まちづくりセンター</p>
-
-          <div class="map-wrap">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.3182897746897!2d139.46157117579264!3d35.79211867255165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ddf2588b29af%3A0x7d358c5f47985a5e!2z5omA5rKi5biCIOS4reWkruWFrOawkemkqA!5e0!3m2!1sja!2sjp!4v1783229187220!5m2!1sja!2sjp"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin">
-            </iframe>
-          </div>
-        </div>
-
-        <!-- 所沢市吾妻公民館 -->
-        <div class="access-box">
-          <h3>所沢市吾妻公民館</h3>
-          <p>〒359-1131<br>埼玉県所沢市久米2229-1</p>
-
-          <div class="map-wrap">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8444529518492!2d139.45311617584028!3d35.77919707255569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e75790d680ef%3A0xb4b9789b2d579931!2z5omA5rKi5biCIOWQvuWmu-WFrOawkemkqA!5e0!3m2!1sja!2sjp!4v1783229270293!5m2!1sja!2sjp"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin">
-            </iframe>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ====== CONTACT ====== -->
-  <section id="contact">
-    <div class="inner">
-      <h2>お問い合わせ・無料体験</h2>
-      <p class="lead">お気軽にお問い合わせください。</p>
-
-      <div style="width:100%; max-width:100%; overflow:hidden;">
-        <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLScAuTXg1XXfXJrUNRoZBSF8W1zVzKAcMMhR5ly_NE1QD2GGDg/viewform?embedded=true"
-          width="100%" 
-          height="1400" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0"
-          style="border:0; border-radius: 12px;">
-          読み込んでいます…
-        </iframe>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ====== FOOTER ====== -->
-  <footer>
-    © 2026 Brights CHEER DANCE / Tokorozawa.
-  </footer>
-
-</body>
-</html>
+          <p
